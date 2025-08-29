@@ -14,8 +14,11 @@ function crearimagen(event) {
     elementos.appendChild(imagen);
     */
     const imagen = new Image();
+    const texto = document.createElement("h2");
     imagen.src = "../resources/img/greninja.png";
+    texto.textContent = imagen.src.substring(imagen.src.lastIndexOf("/")+1);
     imagen.classList.add("imagen-nueva");
     elementos.appendChild(imagen);
+    elementos.appendChild(texto);
     }
 }
