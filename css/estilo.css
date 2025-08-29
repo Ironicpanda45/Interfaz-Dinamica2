@@ -1,26 +1,64 @@
-*{
+* {
     padding: 0;
     margin: 0;
-}
-body{
-    width: 100vw;
-    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.formulario-dinamico{
+body {
     width: 100%;
     height: 100%;
-    background-color: aqua;
-    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
 }
-.elementos{
-    width: 50%;
+
+.formulario-dinamico {
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.397);
+}
+
+.elementos {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.imagen-nueva {
+    width: 100%;
     height: 50%;
-    background-color: rgb(13, 77, 78);
-    overflow-y: scroll;
+    object-fit: cover;
 }
-.imagen-nueva{
-    width: 200px;
-    height: auto;
+
+.tarjetacontenedor{
+    width: 20vw;
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.tarjetacontenedor button{
+    color: white;
+    font-size: 20px;
+    padding: 10px 40px;
+    background: linear-gradient(90deg,rgb(0, 183, 255) 0%, rgb(68, 0, 255) 100%);
+    border-radius: 40px;
+    border: 0;
+    margin: 10px;
+    cursor: pointer;
+    margin-top: auto;
+}
+.tarjetacontenedor h2{
+    font-size: 30px;
+    margin: 10px;
+}
+.tarjetacontenedor p{
+    font-size: 14px;
     margin: 10px;
 }
