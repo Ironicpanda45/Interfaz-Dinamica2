@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -61,4 +62,47 @@ body {
 .tarjetacontenedor p{
     font-size: 14px;
     margin: 10px;
+}
+
+.contenedor_formulario_nuevo{
+    padding: 10px;
+    background-color: rgb(190, 199, 255);
+    width: 39vw;
+    border-radius: 20px;
+}
+#formulario_producto{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#formulario_producto label{
+    font-size: 20px;
+    margin: 10px;
+}
+#formulario_producto input{
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 20px;
+}
+
+
+#textareadescripcion{
+    max-width: 100%;
+    min-width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 20px;
+}
+
+#buttonagg{
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 40px;
+    background: linear-gradient(90deg,rgb(0, 183, 255) 0%, rgb(68, 0, 255) 100%);
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
 }
