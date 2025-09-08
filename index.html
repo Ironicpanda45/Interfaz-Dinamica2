@@ -18,14 +18,15 @@
     </form>
     <div class="contenedor_formulario_nuevo">
         <form id="formulario_producto" action="">
-            <!--<label for="imagen"></label>
-            <input type="file" name="imagen" id="imagen_producto">-->
+            <img id="imagen-file" class="imagen-previsualizacion" src="./resources/img/1077596-200.png" alt="">
+            <label for="imagen"></label>
+            <input type="file" name="imagen" id="imagen_producto" onchange="ObtenerImagen(event)">
             <label for="nombre">Nombre producto</label>
-            <input type="text" name="nombre" id="nombre_producto">
+            <input type="text" name="nombre" id="nombre_producto" required>
             <label for="descripcion">Descripcion</label>
-            <textarea id="textareadescripcion" name="descripcion" id="descripcion_producto"></textarea>
+            <textarea id="textareadescripcion" name="descripcion" id="descripcion_producto" required></textarea>
             <label for="precio">Precio</label>
-            <input type="number" name="precio" id="precio_producto">
+            <input type="number" name="precio" id="precio_producto" required>
         </form>
         <button onclick="AgregarProducto(event)" id="buttonagg">Agregar</button>
     </div>
