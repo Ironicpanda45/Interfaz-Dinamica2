@@ -2,6 +2,8 @@ const formulario_producto_nuevo = document.querySelector("#formulario_producto")
 let Productos = [];
 let src_imagen_producto = "./resources/img/1077596-200.png";
 
+const elementos2 = document.querySelector("#elementos2");
+
 class Producto{
     constructor(id, imagen, nombre, descripcion, precio){
         this.id = id;
@@ -17,6 +19,28 @@ class Producto{
         console.log(this.descripcion)
         console.log(this.precio)
     }
+    MostrarProductos(){
+    const tarjetacontenedor = document.createElement("div");
+    tarjetacontenedor.classList.add("tarjetacontenedor");
+    elementos2.appendChild(tarjetacontenedor);
+
+    const imagen = document.createElement("img");
+    tarjetacontenedor.appendChild(imagen);
+    imagen.classList.add("imagen-nueva");
+    imagen.src = this.imagen;
+
+    const texto = document.createElement("h2");
+    tarjetacontenedor.appendChild(texto);
+    texto.textContent = this.nombre;
+
+    const parrafo = document.createElement("p");
+    tarjetacontenedor.appendChild(parrafo);
+    parrafo.textContent = this.descripcion;
+
+    const boton = document.createElement("button");
+    tarjetacontenedor.appendChild(boton);
+    boton.textContent = this.precio + "$";
+    }
 }
 
 function AgregarProducto(event){
@@ -24,8 +48,10 @@ function AgregarProducto(event){
     const datos = Object.fromEntries(lectorformulario.entries());
     if(datos.nombre !="" && datos.descripcion !="" && datos.precio!=null){
     Productos.push(new Producto(Productos.length+1, src_imagen_producto,datos.nombre, datos.descripcion, datos.precio));
+    elementos2.innerHTML = "";
     Productos.forEach(producto => {
         producto.Obtenerdatos();
+        producto.MostrarProductos();
     });
         }
     //const json = JSON.stringify(datos);
