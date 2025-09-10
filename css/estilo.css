@@ -50,6 +50,7 @@ body {
 }
 
 .tarjetacontenedor{
+    opacity: 0;
     width: 20vw;
     height: 50vh;
     background-color: rgb(255, 255, 255);
@@ -58,6 +59,17 @@ body {
     display: flex;
     flex-direction: column;
     border: 2px rgb(214, 214, 214) solid;
+    animation: fade 0.2s ease-out forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .tarjetacontenedor button{
     color: white;

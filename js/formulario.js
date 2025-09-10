@@ -22,7 +22,8 @@ class Producto{
     MostrarProductos(){
     const tarjetacontenedor = document.createElement("div");
     tarjetacontenedor.classList.add("tarjetacontenedor");
-    elementos2.appendChild(tarjetacontenedor);
+    tarjetacontenedor.style.animationDelay = this.id/5+"s";
+    elementos2.prepend(tarjetacontenedor);
 
     const imagen = document.createElement("img");
     tarjetacontenedor.appendChild(imagen);
