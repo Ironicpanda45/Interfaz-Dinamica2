@@ -92,6 +92,7 @@ body {
 }
 
 .contenedor_formulario_nuevo{
+    display: none;
     padding: 10px;
     background-color: rgb(226, 226, 226);
     width: 30%;
@@ -142,4 +143,21 @@ body {
 }
 .Agregadordeproductos{
     display: flex;
+}
+
+#menu{
+    background: linear-gradient(90deg,rgb(239, 251, 255) 0%, rgb(244, 240, 255) 100%);
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px rgb(72, 8, 146) solid;
+}
+
+.menuopcion{
+    color: black;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border: 2px black solid;
+    cursor: pointer;
+    border-radius: 40px;
 }
