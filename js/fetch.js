@@ -20,7 +20,6 @@ function peticionAJAX(url) {
         
         const tarjetacontenedor = document.createElement("div");
         tarjetacontenedor.classList.add("tarjetacontenedor");
-        tarjetacontenedor.style.animationDelay = 0 + "s";
         elementos2.prepend(tarjetacontenedor);
 
         const imagen = document.createElement("img");
