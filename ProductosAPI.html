@@ -1,32 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularios dinamicos</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <title>Agregar producto</title>
+        <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body>
-    <!--
-    <form id="formulario-dinamico" class="formulario-dinamico">
-        <label for="cantidad">Ingrese la cantidad de elementos a crear</label>
-        <input type="number" name="cantidad" id="cantidad">
-        <input type="button" value="Click" onclick="crearimagen(event)">
-        <div id="elementos" class="elementos">
-        </div>
-    </form>
-    -->
-    <div id="menu">
-        <div class="menuopcion">Productos</div>
-        <div class="menuopcion">Productos2</div>
-        <div class="menuopcion">Registro</div>
-        <div class="menuopcion">Inicio de sesion</div>
-        <div class="menuopcion">Carrito</div>
-    </div>
-    <button onclick="ocultarformulario(event)" id="buttonagg">Ocultar</button>
-    <div class="Agregadordeproductos">
+        <div class="Agregadordeproductos">
         <div class="contenedor_formulario_nuevo">
         <form id="formulario_producto" action="">
             <img id="imagen-file" class="imagen-previsualizacion" src="./resources/img/1077596-200.png" alt="">
@@ -44,6 +25,5 @@
         <div id="elementos2" class="elementos2"></div>
     </div>
 </body>
-<script src="js/script.js"></script>
-<script src="js/formulario.js"></script>
+<script src="js/fetch.js"></script>
 </html>
