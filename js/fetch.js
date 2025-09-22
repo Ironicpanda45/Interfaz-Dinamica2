@@ -7,6 +7,8 @@ fetch(url_api)
     console.log(datos)
   });
 
+const formulario_producto = document.querySelector(".contenedor_formulario_nuevo")
+formulario_producto.style.display = "block";
 
 function peticionAJAX(url) {
   let xhr = new XMLHttpRequest();
@@ -38,6 +40,8 @@ function peticionAJAX(url) {
         const boton = document.createElement("button");
         tarjetacontenedor.appendChild(boton);
         boton.textContent = datos[i].price + "$";
+
+        tarjetacontenedor.classList.add("animacion-tarjeta");
       }
     } else {
       console.log("El error es: " + xhr.status);
