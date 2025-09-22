@@ -1,7 +1,7 @@
 const formulario_producto_nuevo = document.querySelector("#formulario_producto");
 let Productos = [];
 let src_imagen_producto = "./resources/img/1077596-200.png";
-let formularioOculto = true;
+let formularioOculto = false;
 
 const elementos2 = document.querySelector("#elementos2");
 
@@ -48,7 +48,7 @@ function AgregarProducto(event) {
     let lectorformulario = new FormData(formulario_producto_nuevo);
     const datos = Object.fromEntries(lectorformulario.entries());
     
-    if (datos.nombre != "" && datos.descripcion != "" && datos.precio != null) {
+    if (datos.nombre != "" && datos.descripcion != "" && datos.precio != "") {
         const nuevoProducto = new Producto(
             Productos.length + 1,
             src_imagen_producto,
@@ -70,6 +70,8 @@ function AgregarProducto(event) {
         });
         const nuevaTarjeta = elementos2.querySelector('.tarjetacontenedor');
         nuevaTarjeta.classList.add("tarjeta-nueva");
+    }else{
+        alert("Llene todos los campos.")
     }
 }
 function ObtenerImagen(event) {
@@ -85,15 +87,15 @@ function ObtenerImagen(event) {
 }
 function ocultarformulario(event) {
     const formulario_producto = document.querySelector(".contenedor_formulario_nuevo")
-    const buttonagg = document.querySelector("#buttonagg")
+    const buttonocu = document.querySelector("#buttonocu")
     if (!formularioOculto) {
         formulario_producto.style.display = "none";
         formularioOculto = true;
-        buttonagg.innerHTML = "Mostrar formulario";
+        buttonocu.innerHTML = "Mostrar formulario";
     }
     else {
         formulario_producto.style.display = "block";
         formularioOculto = false;
-        buttonagg.innerHTML = "Ocultar formulario";
+        buttonocu.innerHTML = "Ocultar formulario";
     }
 }

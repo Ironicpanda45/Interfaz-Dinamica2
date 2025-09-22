@@ -1,4 +1,3 @@
-/* === ESTILOS GLOBALES === */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +6,8 @@
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: #f5f5f5;
+    color: #333333;
     line-height: 1.6;
     width: 100%;
 }
@@ -20,22 +19,24 @@ body {
     gap: 15px;
     padding: 15px;
     background: #ffffff;
-    border-bottom: 2px solid rgb(68, 0, 255);
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .menuopcion {
     padding: 12px 25px;
-    border: 1px solid #dee2e6;
+    border: 1px solid #cccccc;
     border-radius: 50px;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.3s ease;
+    background: #ffffff;
+    color: #333333;
 }
 
 .menuopcion:hover {
-    background: linear-gradient(90deg, rgb(0, 183, 255) 0%, rgb(68, 0, 255) 100%);
-    color: white;
-    border-color: transparent;
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #333333;
     transform: translateY(-2px);
 }
 
@@ -53,43 +54,44 @@ body {
     padding: 25px;
     background-color: #ffffff;
     border-radius: 16px;
-    display: none;
 }
 
 #formulario_producto {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 }
 
 #formulario_producto label {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     margin-bottom: -5px;
+    color: #555555;
 }
 
 #formulario_producto input,
 #textareadescripcion {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
-    border: 1px solid #dee2e6;
-    /* Borde visible para mejor UX */
+    font-size: 12px;
+    background-color: #fdfdfd;
+    border: 1px solid #d0d0d0;
     border-radius: 10px;
     transition: border-color 0.3s;
+    color: #333333;
 }
 
 #formulario_producto input:focus,
 #textareadescripcion:focus {
     outline: none;
-    border-color: rgb(0, 183, 255);
+    border-color: #666666;
 }
 
 .imagen-previsualizacion {
     width: 120px;
     height: 120px;
     align-self: center;
-    border: 3px solid #dee2e6;
+    border: 3px solid #d0d0d0;
     border-radius: 10%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -99,7 +101,7 @@ body {
     flex: 3;
     min-width: 320px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
     grid-auto-rows: 1fr;
 }
@@ -112,7 +114,7 @@ body {
     flex-direction: column;
     opacity: 0;
     transition: transform 0.3s;
-    border: 2px solid rgb(236, 236, 236);
+    border: 2px solid #e0e0e0;
 }
 
 .tarjetacontenedor:hover {
@@ -126,7 +128,7 @@ body {
 .tarjeta-nueva::after {
     position: absolute;
     content: "Nuevo";
-    background-color: rgb(56, 56, 56);
+    background-color: #000000;
     color: white;
     padding: 10px;
     margin: 10px;
@@ -139,12 +141,53 @@ body {
     animation: animacion-tarjeta 0.5s ease forwards;
 }
 
+.bienvenida-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.bienvenida-container h1 {
+    font-size: 1.5rem;
+    color: #444444;
+    margin-bottom: 15px;
+}
+
+.bienvenida-container p {
+    font-size: 0.8rem;
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.lista-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lista-caracteristicas li {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border-left: 5px solid #444444;
+    text-align: left;
+}
+
+.lista-caracteristicas li strong {
+    color: #000000;
+}
+
 @keyframes fade {
     from {
         opacity: 0;
         transform: translateX(-40px);
     }
-
     to {
         opacity: 1;
         transform: translateX(0);
@@ -153,14 +196,12 @@ body {
 
 @keyframes animacion-tarjeta {
     0% {
-        background-color: aliceblue;
+        background-color: #f0f0f0;
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.02);
     }
-
     100% {
         background-color: white;
         transform: scale(1);
@@ -174,41 +215,52 @@ body {
 }
 
 .tarjetacontenedor h2 {
-    font-size: 22px;
+    font-size: 12px;
     margin: 15px 20px 10px;
     max-height: 100px;
     overflow: hidden;
     position: relative;
+    color: #333333;
 }
 
 .tarjetacontenedor p {
-    font-size: 15px;
+    font-size: 10px;
     margin: 0 20px 20px;
-    max-height: 50px;
-    overflow: hidden;
+    max-height: 100px;
+    overflow-y: scroll;
     position: relative;
-    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    color: #000000;
+    text-overflow: inherit;
 }
 
 #buttonagg,
 #buttonocu,
 .tarjetacontenedor button {
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     padding: 12px 30px;
-    background: linear-gradient(90deg, rgb(0, 183, 255) 0%, rgb(68, 0, 255) 100%);
+    background-color: #333333;
     border-radius: 50px;
     border: 0;
     cursor: pointer;
     text-align: center;
     margin: 10px;
-    transition: transform 0.2s;
+    transition: all 0.2s ease;
 }
 
 #buttonocu {
-    margin: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px #333333 solid;
+    color: #333333;
+}
+
+#buttonagg {
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 .tarjetacontenedor button {
@@ -218,6 +270,15 @@ body {
 #buttonagg:hover,
 .tarjetacontenedor button:hover {
     transform: scale(1.05);
+    background-color: #111111;
+}
+
+#buttonocu:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+}
+a {
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -227,13 +288,36 @@ body {
         padding: 10px;
     }
 
+    .elementos2 {
+        margin: 0 auto;
+        width: 90dvw;
+    }
+
     .contenedor_formulario_nuevo {
         margin: 0 auto;
+        padding: 10px;
     }
-    .menuopcion{
-        width: 100svw;
+
+    .menuopcion {
+        width: 100dvw;
     }
+
     #buttonocu {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 345px) {
+    #menu {
+        width: 345px;
+    }
+
+    .menuopcion {
+        width: 345px;
+    }
+
+    .formulario_producto {
+        width: 345px;
         margin: 20px;
     }
 }
